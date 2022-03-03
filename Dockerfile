@@ -11,7 +11,7 @@ RUN curl -s https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
 RUN docker-php-source extract \
-    && docker-php-ext-configure zip --with-zlib \
+    && docker-php-ext-configure zip \
     && docker-php-ext-install zip \
     && docker-php-source delete
 
